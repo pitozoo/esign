@@ -1,0 +1,24 @@
+{
+  "name": "pitozoo/esign",
+  "type": "library",
+  "description": "esign lib",
+  "keywords": [ "esign" ],
+  "homepage": "https://github.com/pitozoo/esign",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pitozoo",
+      "email": "pitozoo@sina.com",
+      "homepage": "http://pitozoo.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Esign\\": "/src"
+    }
+  }
+}
