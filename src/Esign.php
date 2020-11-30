@@ -315,30 +315,6 @@ class Esign
     return $res;
   }
 
-  
-
-  /**
-   * @name 创建印章 个人
-   */
-  public static function createPersonSeal( string $userId='' , bool $debug=false ) : array
-  {
-    $apiUrl = self::$apiHost . Uri::EURI_GET_PERSON;
-    $res = self::_getUser($apiUrl , $userId , $debug );
-    return $res;
-  }
-
-  /**
-   * @name 创建印章 企业
-   */
-  public static function createCompanySeal( string $userId='' , bool $debug=false ) : array
-  {
-    $apiUrl = self::$apiHost . Uri::EURI_GET_COMPANY;
-    $res = self::_getUser($apiUrl , $userId , $debug );
-    return $res;
-  }
-
-
-
   /**
    * @name 创建签署流程
    * @param $scene 业务场景介绍: 内容必填
@@ -904,7 +880,7 @@ class Esign
   private static function _addUserSeal( string $apiUrl , string $userId , array $sealStyle=[] , bool $debug=true ): array
   {
     $res = [];
-
+    
     if( self::$appid )
     {
       if( self::$stoken )
