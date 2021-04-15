@@ -35,7 +35,8 @@ namespace Esign;
 * 查询企业所以印章           EURI_COMPANY_SEALS
 * 删除个人印章              EURI_DELETE_PERSON_SEAL
 * 删除企业印章              EURI_DELETE_COMPANY_SEAL
-* 
+* 设置静默签署              EURI_SIGNAUTH
+*
 */
 
 
@@ -73,6 +74,10 @@ class Uri
 	const EURI_COMPANY_SEALS  = '/v1/organizations/{accountId}/seals' ;
 	const EURI_DELETE_PERSON_SEAL  = '/v1/accounts/{accountId}/seals/{sealId}' ;
 	const EURI_DELETE_COMPANY_SEAL  = '/v1/organizations/{accountId}/seals/{sealId}' ;
+	const EURI_COMPANY_GRANTED_SEALS  = '/v1/organizations/{accountId}/granted/seals' ;
+
+	const EURI_SIGNAUTH  = '/v1/signAuth/{accountId}' ;
+	const EURI_AUTOSIGN  = '/v1/signflows/{flowId}/signfields/autoSign' ;
 
 }
 
